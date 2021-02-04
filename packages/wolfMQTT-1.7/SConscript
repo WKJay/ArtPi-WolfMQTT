@@ -1,0 +1,12 @@
+
+from building import *
+import rtconfig
+
+cwd     = GetCurrentDir()
+src     = Glob('src/*.c')
+CPPPATH = [cwd]
+LOCAL_CCFLAGS = ''
+
+group = DefineGroup('wolfMQTT', src, depend = [''], CPPPATH = CPPPATH, LOCAL_CCFLAGS = LOCAL_CCFLAGS)
+
+Return('group')
