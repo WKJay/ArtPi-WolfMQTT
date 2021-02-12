@@ -29,7 +29,8 @@ int main(void) {
     while (!rt_wlan_is_ready()) {
         rt_thread_mdelay(500);
     }
-    mqtt_test();
+
+    mqtt_init();
 
     while (count++) {
         rt_thread_mdelay(500);
